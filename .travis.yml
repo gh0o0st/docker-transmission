@@ -5,5 +5,9 @@ services:
 
 before_install:
   - docker build -t simonding/transmission .
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push simonding/transmission 
+
+deploy:
+  provider: script
+  script: bash docker_push
+  on:
+    branch: master
