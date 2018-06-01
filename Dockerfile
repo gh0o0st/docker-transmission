@@ -20,7 +20,10 @@ RUN \
  apk add --no-cache \
 	--repository http://nl.alpinelinux.org/alpine/edge/main \
 	transmission-cli \
-	transmission-daemon
+	transmission-daemon && \
+ curl -Ls https://github.com/ronggang/transmission-web-control/\
+raw/master/release/install-tr-control-cn.sh | sh -s auto
+
 
 # copy local files
 COPY root/ /
