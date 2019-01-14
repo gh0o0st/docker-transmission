@@ -18,7 +18,6 @@ RUN \
 	unrar \
 	unzip && \
  apk add --no-cache \
-	--repository http://nl.alpinelinux.org/alpine/edge/main \
 	transmission-cli \
 	transmission-daemon && \
  curl -Ls https://github.com/ronggang/transmission-web-control/\
